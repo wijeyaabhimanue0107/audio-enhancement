@@ -19,3 +19,537 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.audioPlayer {
+  background-color: #dcf8c6;
+  border: none;
+  width: 300px;
+  outline: none;
+}
+
+.audioPlayer::-webkit-media-controls-panel {
+  background-color: #dcf8c6;
+}
+
+.audioPlayer::-moz-range-track {
+  background: #dcf8c6;
+}
+
+.audioPlayer::-moz-range-progress {
+  background: #dcf8c6;
+}
+
+.audioMessage {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.audioMessage .playButton,
+.audioMessage .pauseButton {
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.audioMessage .progressBarContainer {
+  flex: 1;
+  margin: 0 10px;
+  position: relative;
+}
+
+.audioMessage .progressBar {
+  width: 100%;
+  height: 5px;
+  background-color: #dcf8c6;
+  border-radius: 2.5px;
+  overflow: hidden;
+}
+
+.audioMessage .progress {
+  width: 0%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 2.5px;
+  transition: width 0.1s ease-in-out;
+}
+
+.audioMessage .time {
+  font-size: 12px;
+  color: #080808;
+  margin-left: 10px;
+}
+
+.micButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #57b04e;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.audioRec::-webkit-media-controls-panel {
+background-color: #c4c6c4;
+}
+
+.audioRec::-moz-range-track {
+background: #c4c6c4;
+}
+
+.audioRec::-moz-range-progress {
+background: #c4c6c4;
+}
+
+.audioPreview {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.deleteIcon {
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.binWrapper {
+display: inline-block;
+transition: transform 0.3s ease;
+}
+
+.sendBox, .receiveBox {
+    padding: 7px 12px 5px 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.sendImageBox {
+  background-color: #dcf8c6;
+  /* border-radius: 10px; */
+}
+
+.receiveImageBox {
+  background-color: #44a434;
+  /* border-radius: 10px; */
+}
+
+.repliedImageMessage{
+  display: flex;
+  justify-content: space-between;
+}
+
+.imagePreview {
+  padding: 7px;
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 14px;
+}
+
+.replySendBox {
+  padding: 7px 12px 5px 12px;
+  border-radius: 0 0 8px 8px ;
+  font-size: 16px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.replyReceiveBox{
+  padding: 7px 12px 5px 12px;
+  border-radius: 0 0 8px 8px ;
+  font-size: 16px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.sendDocumentBox {
+    background-color: #dcf8c6;
+    color: #000;
+    margin-top: 5px;
+}
+
+.sendBox {
+  background-color: #dcf8c6;
+  color: #000;
+  margin-top: 5px;
+}
+
+.receiveBox {
+    background-color: #44a434;
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+.receiveDocumentBox {
+  background-color: #44a434;
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.documentMessage {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  width: 150px;
+  margin: 5px 0;
+  cursor: pointer;
+  position: relative; 
+}
+
+.documentIcon {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #3b5998;
+}
+
+.documentText {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+}
+
+.documentMessage:hover {
+  background-color: #e0e0e0;
+  transition: background-color 0.2s ease;
+}
+
+.documentIcon {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #3b5998;
+}
+
+.largeDocumentPreview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333333;
+}
+
+.replySendBox {
+    background-color: #dcf8c6;
+    color: #000;
+}
+
+.replyReceiveBox {
+    background-color: #44a434;
+    color: #ffffff;
+}
+
+.sendBoxContainer, .receiveBoxContainer {
+    display: flex;
+}
+
+.sendBoxContainer {
+    justify-content: flex-end;
+}
+
+.replyWrapper {
+  border-radius: 8px 8px 0 0; 
+  padding: 8px 7px 0 5px; 
+}
+
+.sendReplyHighlight {
+  background-color: #dcf8c6; 
+}
+
+.receiveReplyHighlight {
+  background-color: #44a434; 
+}
+
+.repliedMessageBubble {
+  padding: 2px 10px;
+  max-width: 80%; 
+  word-wrap: break-word;
+  cursor: pointer;
+}
+
+.receiveBoxContainer {
+    justify-content: flex-start;
+}
+
+  
+  .senderBox .fileInputContainer {
+    position: absolute;
+    right: 20px; 
+    top: 55%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+  
+.senderBox .selectedFile {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.topspace {
+    height: 14px;
+    /* padding: 20px 0 20px 0; */
+}
+
+.statusWrapper {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  justify-content: flex-end;
+  bottom: 0;
+}
+
+.messageTime {
+  font-size: 12px;
+  color: #999; 
+  margin-right: 5px; 
+}
+
+
+/* .deleteIcon:hover {
+box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.1); 
+} */
+
+
+
+.recordingIndicator {
+display: flex;
+align-items: center;
+gap: 10px; 
+}
+
+.spikes {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.spike {
+width: 2px;
+height: 20px;
+background-color: rgb(88, 87, 87);
+margin: 0 2px;
+animation: spikeAnimation 0.5s infinite ease-in-out;
+}
+
+@keyframes spikeAnimation {
+0% {
+  height: 5px;
+}
+50% {
+  height: 30px;
+}
+100% {
+  height: 5px;
+}
+}
+
+.spike:nth-child(1) {
+animation-delay: 0s;
+}
+
+.contactNameContainer {
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 5px; */
+    cursor: pointer;
+  }
+  
+  .navContactName {
+    padding: 10px 0 0 0;
+    display: block; 
+    max-width: 35ch;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    margin-bottom: 2px;
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+    position: relative;
+  }
+  
+  .onlineStatus {
+    display: flex;
+    align-items: center;
+    color: green;
+    font-size: 12px;
+  }
+  
+  .greenDot {
+    height: 4px;
+    width: 4px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+  .contactTag {
+    height: 22px;  
+    width: 85px;
+    /* margin-left: 0px; */
+  }
+
+  .editContainer {
+    width: 53px;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #57b04e;
+    padding: 8px;
+    border-radius: 25px;
+    cursor: pointer;
+    padding-right: 13px;
+  }
+  
+  .editText {
+    color: white;
+    margin-left: 5px;
+    font-size: 16px; 
+  }
+
+  .editProfileIcon{
+    margin-left: 2px;
+    cursor: pointer;
+  }
+
+  .contactDetailsContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+  }
+
+  .contactNo {
+    font-size: 14px;
+    color: #555; 
+    margin-left: 5px;
+  }
+
+  .statusDot {
+    margin: 10px 0 0 0;
+    height: 8px;
+    width: 8px;
+    display: block;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 9px;
+  }
+  
+  .greenDot {
+    background-color: green;
+  }
+  
+  .redDot {
+    background-color: red;
+  }
+  
+  .connectionStatus {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .statusText {
+    padding: 10px 0 0 0;
+    display: block;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  
+
+.messageTime {
+    color: gray;
+    font-size: 12px;
+    margin-right: 8px;
+    white-space: nowrap;
+}
+
+.spike:nth-child(3) {
+animation-delay: 0.2s;
+}
+
+.spike:nth-child(4) {
+animation-delay: 0.3s;
+}
+
+.spike:nth-child(5) {
+animation-delay: 0.4s;
+}
+.spike:nth-child(6) {
+animation-delay: 0.5s;
+}
+
+.spike:nth-child(7) {
+animation-delay: 0.6s;
+}
+
+.spike:nth-child(8) {
+animation-delay: 0.7s;
+}
+
+.spike:nth-child(9) {
+animation-delay: 0.8s;
+}
+
+.spike:nth-child(10) {
+animation-delay: 0.9s;
+}
+.spike:nth-child(11) {
+animation-delay: 1.0s;
+}
+.spike:nth-child(12) {
+animation-delay: 1.1s;
+}
+.spike:nth-child(13) {
+animation-delay: 1.2s;
+}
+.spike:nth-child(14) {
+animation-delay: 1.3s;
+}
+.spike:nth-child(15) {
+animation-delay: 1.4s;
+}
+.spike:nth-child(16) {
+animation-delay: 1.5s;
+}
+.spike:nth-child(17) {
+animation-delay: 1.6s;
+}
+.spike:nth-child(18) {
+animation-delay: 1.7s;
+}
+.spike:nth-child(19) {
+animation-delay: 1.8s;
+}
+.spike:nth-child(20) {
+animation-delay: 1.9s;
+}
+
+.recordingIndicator {
+display: flex;
+align-items: center;
+}
+
+.chatFooter {
+  background-color: #d0d3d2; /* Light greenish-gray background for WhatsApp feel */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
+}
